@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Details Product</title>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--===============================================================================================-->	
+		<link rel="icon" type="image/png" href="/images/icons/favicon.ico"/>
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+        <!--===============================================================================================-->	
+            <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+        <!--===============================================================================================-->	
+            <link rel="stylesheet" type="text/css" href="/vendor/daterangepicker/daterangepicker.css">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="/css/util.css">
+            <link rel="stylesheet" type="text/css" href="/css/main.css">
+        <!--===============================================================================================-->
+    </head>
+    <body>
+        <header class="dxc-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4">
+                    <a class="text-muted" href="#"><img src="/images/logo_dxc.jpg"></a>
+                </div>
+                <div class="col-4 text-center">
+                    <h2>Details Product</h2>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <a class="btn btn-sm btn-outline-secondary" href="/">Sign out</a>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Product ID</td>
+                            <td><%=product._id%></td>
+                        </tr>
+                        <tr>
+                            <td>Product Name</td>
+                            <td><%=product.productName%></td>
+                        </tr>
+                        <tr>
+                            <td>Date</td>
+                            <td><%=product.date%></td>
+                        </tr>
+                        <tr>
+                            <td>Quantity</td>
+                            <td><%=product.quantity%></td>
+                        </tr>
+                        <tr>
+                            <td>Where</td>
+                            <td><%=product.where%></td>
+                        </tr>
+                        <tr>
+                            <td>Buy Cost</td>
+                            <td><%=product.buyCost%></td>
+                        </tr>
+                        <tr>
+                            <td>Sell Cost</td>
+                            <td><%=product.sellCost%></td>
+                        </tr>
+                        <tr>
+                            <td>Category</td>
+                            <td><%=product.categoryID%></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a class="btn btn-info" href="/products">Back To List Product</a>
+            </div>
+        </div>
+        <!--===============================================================================================-->
+        <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="/vendor/animsition/js/animsition.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="/vendor/bootstrap/js/popper.js"></script>
+        <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="/vendor/select2/select2.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="/vendor/daterangepicker/moment.min.js"></script>
+        <script src="/vendor/daterangepicker/daterangepicker.js"></script>
+        <!--===============================================================================================-->
+        <script src="/vendor/countdowntime/countdowntime.js"></script>
+        <!--===============================================================================================-->
+        <script src="/js/main.js"></script>
+    </body>
+</html>

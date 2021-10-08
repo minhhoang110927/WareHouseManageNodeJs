@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Product</title>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--===============================================================================================-->	
+		<link rel="icon" type="image/png" href="/images/icons/favicon.ico"/>
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+		<!--===============================================================================================-->	
+		<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+		<!--===============================================================================================-->	
+		<link rel="stylesheet" type="text/css" href="/vendor/daterangepicker/daterangepicker.css">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="/css/util.css">
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<!--===============================================================================================-->
+    </head>
+    <body>
+        <header class="dxc-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4">
+                    <a class="text-muted" href="#"><img src="/images/logo_dxc.jpg"></a>
+                </div>
+                <div class="col-4 text-center">
+                    <h2>Create New Product</h2>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <a class="btn btn-sm btn-outline-secondary" href="/">Sign out</a>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <form action="/products/create" style="margin-top: 15px;" method="post">
+                <div class="form-group">
+                    <label for="Name">Product Name</label>
+                    <input type="text" class="form-control" name="productName" placeholder="Enter Product Name" required />
+                </div>
+                <div class="form-group">
+                    <label for="Name">Date</label>
+                    <input type="date" class="form-control" name="date" placeholder="Enter Date" required />
+                </div>
+                <div class="form-group">
+                    <label for="Name">Quantity</label>
+                    <input type="text" class="form-control" name="quantity" placeholder="Enter Quantity" required />
+                </div>
+                <div class="form-group">
+                    <label for="Name">Where</label>
+                    <input type="text" class="form-control" name="where" placeholder="Enter Where" required />
+                </div>
+                <div class="form-group">
+                    <label for="Name">Buy Cost</label>
+                    <input type="text" class="form-control" name="buyCost" placeholder="Enter Buy Cost" required />
+                </div>
+                <div class="form-group">
+                    <label for="Name">Sell Cost</label>
+                    <input type="text" class="form-control" name="sellCost" placeholder="Enter Sell Cost" required />
+                </div>
+                <!-- <div class="form-group">
+                    <label for="Name">Category</label>
+                    <input type="text" class="form-control" name="categoryID" placeholder="Choose Category" required />
+                </div> -->
+                <div class="form-group">
+                    <label for="categoryID">Category</label>
+                    <!-- <input type="text" class="form-control" name="categoryID" placeholder="Choose Category" required /> -->
+                    <% if(categories.length > 0) { %>
+                    <select name="categoryID">
+                        <% for(var i = 0; i < categories.length; i++) { %>
+                            <option value="<%=categories[i]._id%>"><%=categories[i].categoryName%></option>
+                            <% } %>
+                    </select>
+                    <% } else { %>
+                        <a>No category found. Please create new category first.</a>
+                        <% } %>
+                </div>
+                <div class="form-group">
+                    <a class="btn btn-info" href="/products">Back To List Product</a>
+                    <button type="submit" class="btn btn-success" href="/products/create">Save</button>
+                </div>
+            </form>
+        </div>
+        
+        <!--===============================================================================================-->
+        <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="/vendor/animsition/js/animsition.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="/vendor/bootstrap/js/popper.js"></script>
+        <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="/vendor/select2/select2.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="/vendor/daterangepicker/moment.min.js"></script>
+        <script src="/vendor/daterangepicker/daterangepicker.js"></script>
+        <!--===============================================================================================-->
+        <script src="/vendor/countdowntime/countdowntime.js"></script>
+        <!--===============================================================================================-->
+        <script src="/js/main.js"></script>
+    </body>
+</html>
